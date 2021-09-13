@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #2E2E2F;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans',
+    sans-serif;
+}
+
+.box {
+    padding: 20px;
+    height: auto;
+    width: 750px;
+    color: #fff;
+    background: linear-gradient(#1d1d1d, #221f1f);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.288);
+    border-radius: 23px;
+}
+
+.user-name {
+    margin-top: 20px;
+}
+
+.box img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    height: 100vh;
+}
+
+.desc {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 25px;
+}
+
+.right {
+    float: right;
+    display: block;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6e3e3;
+    margin: 10px 10px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icons i {
+    color: #000;
+}
+
+.social-icons a:hover {
+    background-color: #000;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    transition: all ease 0.5s;
+}
+
+.social-icons a:hover i {
+    color: #fff;
+    transition: all ease 0.5s;
+}
