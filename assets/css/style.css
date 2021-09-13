@@ -3,7 +3,6 @@
 body {
     margin: 0;
     padding: 0;
-    background: #2E2E2F;
     box-sizing: border-box;
     font-family: 'Josefin Sans',
     sans-serif;
@@ -11,7 +10,7 @@ body {
 
 .box {
     padding: 20px;
-    height: auto;
+    height: 500px;
     width: 750px;
     color: #fff;
     background: linear-gradient(#1d1d1d, #221f1f);

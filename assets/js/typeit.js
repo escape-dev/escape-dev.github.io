@@ -1,7 +1,17 @@
-  new TypeIt(".type-it", {
-  strings: ["Hallo, namaku Muhammad Hafiz Al Fikri.", 
-    "so uh, jadi gini aku kuliah di Universitas AMIKOM Yogyakarta di jurusan Sistem Informasi.", 
-    "jadi aku juga punya hobi yaitu ngegame, yess ngegame. ehe"],
-  speed: 150,
+new TypeIt("#type-it", {
+  speed: 75,
   waitUntilVisible: true,
-}).go();
+})
+  .type("Wwb", { delay: 500 })
+  .move(-1)
+  .delete(1)
+  .type("e")
+  .move(null, { to: "END" })
+  .type(" Devlopr", {delay: 500})
+  .move(-4)
+  .type("e")
+  .move(3)
+  .type("e")
+  .move(null, { to: "END" })
+  .pause(300)
+  .go();
