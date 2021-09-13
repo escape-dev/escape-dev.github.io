@@ -44,6 +44,10 @@ body {
     font-size: 25px;
 }
 
+.desc-2 {
+    font-size: 22px;
+}
+
 .right {
     float: right;
     display: block;
@@ -78,4 +82,72 @@ body {
 .social-icons a:hover i {
     color: #fff;
     transition: all ease 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+
+    .box {
+        width: 680px;
+    }
+
+    .box img {
+        width: 185px;
+        height: 185px;
+    }
+
+    .desc-2 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 583px) {
+
+    .box {
+        width: 345px;
+        height: 600px;
+    }
+
+    .box img{
+        margin-left: 80px;
+        width: 150px;
+        height: 150px;
+    }
+
+    .desc {
+        font-size: 18px;
+    }
+
+    .desc-2 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .box {
+        width: 300px;
+        height: 600px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .box img {
+        margin-left: 60px;
+        width: 150px;
+        height: 150px;
+    }
+
+    .desc {
+        font-size: 15px;
+    }
+
+    .desc-2 {
+        font-size: 13px;
+    }
 }
