@@ -2,6 +2,7 @@ new TypeIt("#type-it", {
   speed: 75,
   waitUntilVisible: true,
 })
+  .pause(2000)
   .type("Wwb", { delay: 500 })
   .move(-1)
   .delete(1)
