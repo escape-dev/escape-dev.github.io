@@ -1,125 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biodata</title>
-    <link rel="icon" href="assets/img/anu.png">
-
-    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
-    <!-- swiper js -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-    <!-- bootsrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="description" content="Personal website of Muhammad Hafiz Al Fikri" />
+    <title>Muhammad Hafiz Al Fikri</title>
+    <link rel="icon" href="./assets/img/anu.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="main center">
-                        <div class="box">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <img src="assets/img/anu.png" alt="nothing">
-                                </div>
-                                <div class="col">
-                                    <h1 class="user-name">Muhammad Hafiz Al Fikri</h1>
-                                    <hr>
-                                    <h3>I am <span id="type-it"></span></h3>
-                                </div>
-                            </div>
-                            <p class="desc">
-                                Hallo, perkenalkan nama saya Muhammad Hafiz Al Fikri.
-                                Saya sedang menempuh perkuliahan di AMIKOM Yogyakarta.
-                                Saya juga memiliki hobi yaitu menonton film dan bermain game. hehe
-                            </p>
 
-                            <div class="social-icons center">
-                                <a href="https://www.facebook.com/hafiz.alfikri.98"> <i class="fab fa-facebook"></i> </a>
-                                <a href="https://www.instagram.com/mhafiz_021/"> <i class="fab fa-instagram"></i> </a>
-                                <a href="https://github.com/MHafizAF"> <i class="fab fa-github"></i> </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="main center">
-                        <div class="box">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <img src="assets/img/anu.png" alt="nothing">
-                                </div>
-                                <div class="col">
-                                    <h1 class="user-name">Muhammad Hafiz Al Fikri</h1>
-                                    <hr>
-                                    <h3>I am <span>Web Developer</span></h3>
-                                </div>
-                            </div>
-                            <div class="row mt-4">
-                                <div class="col-4 desc-2">
-                                    <span class="right">Umur :</span>
-                                </div>
-                                <div class="col desc-2">
-                                    20
-                                </div>                               
-                            </div>
-
-                            <div class="row">
-                                <div class="col-4 desc-2">
-                                    <span class="right">Alamat :</span>
-                                </div>
-                                <div class="col desc-2">
-                                    Gunungmojo, Ringinputih, Karangdowo, Klaten 
-                                </div>                               
-                            </div>
-
-                            <div class="row">
-                                <div class="col-4 desc-2">
-                                    <span class="right">Email :</span>
-                                </div>
-                                <div class="col desc-2">
-                                    hafiz170301@gmail.com 
-                                </div>                               
-                            </div>
-
-                            <div class="row">
-                                <div class="col-4 desc-2">
-                                    <span class="right">WhatsApp :</span>
-                                </div>
-                                <div class="col mb-4 desc-2">
-                                    082134914283 
-                                </div>                               
-                            </div>
-
-                            <div class="social-icons center">
-                                <a href="https://www.facebook.com/hafiz.alfikri.98"> <i class="fab fa-facebook"></i> </a>
-                                <a href="https://www.instagram.com/mhafiz_021/"> <i class="fab fa-instagram"></i> </a>
-                                <a href="https://github.com/MHafizAF"> <i class="fab fa-github"></i> </a>
-                            </div>
-                        </div>
-                    </div>
+<body id="home">
+    <main>
+        <section class="about">
+            <h1>
+                Hi there, I'm Hafiz 👋 <br />
+                I'm a Backend Engineer
+            </h1>
+            <p>
+                A backend engineer with one year of experience, <br />
+                always eager to learn and improve my development skills.
+            </p>
+        </section>
+        <section class="experience">
+            <div class="dropdown-container">
+                <button class="dropdown-btn" onclick="toggleDropdown('experience')">
+                    <span class="get-method">Get</span>
+                    <p class="dropdown-description">
+                        /experience
+                        <small>return all my experience</small>
+                    </p>
+                </button>
+                <div class="dropdown-content" id="experience">
+                    <a href="#">Option 2.1</a>
+                    <a href="#">Option 2.2</a>
+                    <a href="#">Option 2.3</a>
                 </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-
-    <!-- swiper js -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/js/swiper.js"></script>
-    <!-- typeit js-->
-    <script src="https://unpkg.com/typeit@8.0.2/dist/index.umd.js"></script>
-    <script src="assets/js/typeit.js"></script>
-    <!-- tweenmax js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-    <script src="assets/js/tweenmax.js"></script>
-
-    <!-- vanta js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.waves.min.js"></script>
-    <script src="assets/js/vanta.js"></script>
+            <div class="dropdown-container">
+                <button class="dropdown-btn" onclick="toggleDropdown('detail')">
+                    <span class="get-method">Get</span>
+                    <p class="dropdown-description">
+                        /detail
+                        <small>return all my detail</small>
+                    </p>
+                </button>
+                <div class="dropdown-content" id="detail">
+                    <a href="#">Option 2.1</a>
+                    <a href="#">Option 2.2</a>
+                    <a href="#">Option 2.3</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./assets/js/app.js"></script>
 </body>
+
 </html>
