@@ -12,7 +12,7 @@ html {
 
 body {
     background-color: #181818;
-    color: #f0f0f0;
+    color: #f2f2f2;
     position: relative;
     font-family: 'Josefin Sans', sans-serif;
 }
@@ -50,21 +50,11 @@ main {
 }
 
 .get-method {
-    padding: 10px 15px;
+    padding: 8px 20px;
     border-radius: 4px;
     font-weight: 600;
-    color: #f0f0f0;
+    color: #f2f2f2;
     background-color: #61affe;
-}
-
-a {
-    text-decoration: none;
-    color: #f0f0f0;
-}
-
-a:hover {
-    font-weight: 600;
-    color: #ffffff;
 }
 
 .dropdown-container {
@@ -78,11 +68,11 @@ a:hover {
     gap: 20px;
     width: 100%;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: #f2f2f2;
     color: #181818;
-    padding: 10px 20px;
-    border: none;
+    padding: 8px;
     cursor: pointer;
+    border: solid 1px #0C71C3;
     border-radius: 4px;
 }
 
@@ -98,8 +88,9 @@ a:hover {
 .dropdown-content {
     display: none;
     width: 100%;
-    background-color: white;
+    background-color: #f2f2f2;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    border: solid 1px #0C71C3;
     border-radius: 4px;
 }
 
@@ -118,3 +109,57 @@ a:hover {
     display: block;
 }
 
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+table {
+    width: 100%;
+    color: #181818
+}
+
+table tr th {
+    padding: 10px 0px;
+}
+
+table tr th:first-child {
+    width: 20%;
+}
+
+table tr td {
+    padding: 20px 20px;
+    vertical-align: top;
+}
+
+table tr td:first-child {
+    text-align: center;
+    width: 20%;
+}
+
+.json-viewer {
+    border-radius: 8px;
+    color: #f2f2f2;
+    background-color: #181818;
+}
+
+.json-key {
+    color: #f2f2f2;
+    font-weight: bold;
+}
+    
+.json-string {
+    color: #098658;
+}
+    
+.json-number {
+    color: #D36363;
+}
+    
+.json-boolean {
+    color: #FCC28C;
+}
+    
+.json-null {
+    color: #b0b0b0;
+}

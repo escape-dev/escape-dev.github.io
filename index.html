@@ -28,28 +28,69 @@
                 <button class="dropdown-btn" onclick="toggleDropdown('experience')">
                     <span class="get-method">Get</span>
                     <p class="dropdown-description">
-                        /experience
+                        /experiences
                         <small>return all my experience</small>
                     </p>
                 </button>
                 <div class="dropdown-content" id="experience">
-                    <a href="#">Option 2.1</a>
-                    <a href="#">Option 2.2</a>
-                    <a href="#">Option 2.3</a>
+                    <table>
+                        <tr>
+                            <th>Code</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td class="json-viewer">200</td>
+                            <td class="json-viewer">
+                                <pre id="experience-content"></pre>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
             <div class="dropdown-container">
-                <button class="dropdown-btn" onclick="toggleDropdown('detail')">
+                <button class="dropdown-btn" onclick="toggleDropdown('projects')">
                     <span class="get-method">Get</span>
                     <p class="dropdown-description">
-                        /detail
+                        /projects
                         <small>return all my detail</small>
                     </p>
                 </button>
-                <div class="dropdown-content" id="detail">
-                    <a href="#">Option 2.1</a>
-                    <a href="#">Option 2.2</a>
-                    <a href="#">Option 2.3</a>
+                <div class="dropdown-content" id="projects">
+                    <table>
+                        <tr>
+                            <th>Code</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td class="json-viewer">403</td>
+                            <td class="json-viewer">
+                                <pre id="projects-content"></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="dropdown-container">
+                <button class="dropdown-btn" onclick="toggleDropdown('reach-me-out')">
+                    <span class="get-method">Get</span>
+                    <p class="dropdown-description">
+                        /reach-me-out
+                        <small>return all my contacts</small>
+                    </p>
+                </button>
+                <div class="dropdown-content" id="reach-me-out">
+                    <table>
+                        <tr>
+                            <th>Code</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td class="json-viewer">200</td>
+                            <td class="json-viewer">
+                                <pre id="reach-me-out-content"></pre>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </section>
