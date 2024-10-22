@@ -34,9 +34,37 @@ function syntaxHighlight(json) {
 
 const experiences = {
   message: "OK",
-  data: {
-    oke: "oke",
-  },
+  data: [
+    {
+      title: "Freelance Backend Developer",
+      description:
+        "Working as a backend developer, responsible for developing and maintaining the company's backend services",
+      start_date: "January 2024",
+      end_date: null,
+      is_active: true,
+      skills: ["Kotlin", "Spring Boot", "PostgreSQL", "Gitlab", "Scrum"],
+    },
+    {
+      title: "Freelance Backend Developer",
+      company_name: "PT. Qatros Teknologi Nusantara",
+      description:
+        "As a backend developer, I create APIs, design database systems, and integrate third-party APIs like Challonge for tournament bracket generator. At MovesGG, a platform for gaming tournaments, I focus on building scalable backend services to handle tournament management and ensure smooth integration with external services.",
+      start_date: "December 2022",
+      end_date: "March 2023",
+      is_active: false,
+      skills: ["Ruby", "Ruby on Rails", "Scrum", "PostgreSQL", "Gitlab"],
+    },
+    {
+      title: "Internship Web Developer",
+      company_name: "PT. Git Solution",
+      description:
+        "Internship as a full stack web developer, develop online learning management system (LMS) using Laravel.",
+      start_date: "September 2021",
+      end_date: "December 2021",
+      is_active: false,
+      skills: ["PHP", "Laravel", "PostgreSQL", "Git", "RESTApi"],
+    },
+  ],
 };
 
 const projects = {
