@@ -1,0 +1,17 @@
+{
+  "message": "OK",
+  "data": [
+    {
+      "platform_name": "linkedin",
+      "url": "https://www.linkedin.com/in/hafizalfikri/"
+    },
+    {
+      "platform_name": "github",
+      "url": "https://github.com/escape-dev"
+    },
+    {
+      "platform_name": "email",
+      "url": "hafiz170301@gmail.com"
+    }
+  ]
+}

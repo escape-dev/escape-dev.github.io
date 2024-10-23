@@ -1,3 +1,8 @@
+const CONFIG = {
+  BASE_URL: "./assets/js/data/",
+  FILE_EXT: ".json",
+};
+
 function toggleDropdown(dropdownId) {
   const dropdown = document.getElementById(dropdownId);
 
@@ -32,68 +37,60 @@ function syntaxHighlight(json) {
   );
 }
 
-const experiences = {
-  message: "OK",
-  data: [
-    {
-      title: "Freelance Backend Developer",
-      description:
-        "Working as a backend developer, responsible for developing and maintaining the company's backend services",
-      start_date: "January 2024",
-      end_date: null,
-      is_active: true,
-      skills: ["Kotlin", "Spring Boot", "PostgreSQL", "Gitlab", "Scrum"],
-    },
-    {
-      title: "Freelance Backend Developer",
-      company_name: "PT. Qatros Teknologi Nusantara",
-      description:
-        "As a backend developer, I create APIs, design database systems, and integrate third-party APIs like Challonge for tournament bracket generator. At MovesGG, a platform for gaming tournaments, I focus on building scalable backend services to handle tournament management and ensure smooth integration with external services.",
-      start_date: "December 2022",
-      end_date: "March 2023",
-      is_active: false,
-      skills: ["Ruby", "Ruby on Rails", "Scrum", "PostgreSQL", "Gitlab"],
-    },
-    {
-      title: "Internship Web Developer",
-      company_name: "PT. Git Solution",
-      description:
-        "Internship as a full stack web developer, develop online learning management system (LMS) using Laravel.",
-      start_date: "September 2021",
-      end_date: "December 2021",
-      is_active: false,
-      skills: ["PHP", "Laravel", "PostgreSQL", "Git", "RESTApi"],
-    },
-  ],
-};
+async function getContent(filename) {
+  return fetch(`${CONFIG.BASE_URL}/${filename}${CONFIG.FILE_EXT}`)
+    .then((response) => response.json())
+    .then((data) => data)
+    .catch((error) =>
+      console.error("Something shit happened: " + error.message)
+    );
+}
 
-const projects = {
-  message:
-    "The project I worked on was an internal system at my previous company, and due to confidentiality agreements, I’m unable to share specific details.",
-  data: null,
-};
+function createContentHtml(content, contentJson) {
+  const { name, method, url, description, status } = content;
 
-const reachMeOut = {
-  message: "OK",
-  data: [
-    {
-      platform_name: "linkedin",
-      url: "https://www.linkedin.com/in/hafizalfikri/",
-    },
-    {
-      platform_name: "github",
-      url: "https://github.com/escape-dev",
-    },
-    {
-      platform_name: "email",
-      url: "hafiz170301@gmail.com",
-    },
-  ],
-};
+  return `<div class="dropdown-container">
+    <button class="dropdown-btn" onclick="toggleDropdown('${name}')">
+    <span class="get-method">${method}</span>
+    <p class="dropdown-description">
+      ${url}
+      <small>${description}</small>
+    </p>
+    </button>
+    <div class="dropdown-content" id="${name}">
+      <table>
+        <tr>
+          <th>Code</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td class="json-viewer">${status}</td>
+          <td class="json-viewer">
+            <pre> ${syntaxHighlight(contentJson)} </pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>`;
+}
 
-document.getElementById("experience-content").innerHTML =
-  syntaxHighlight(experiences);
-document.getElementById("projects-content").innerHTML =
-  syntaxHighlight(projects);
-document.getElementById("reach-me-out-content").innerHTML =
-  syntaxHighlight(reachMeOut);
+async function renderContent() {
+  const mainContent = document.getElementById("main-content");
+  const listContents = await getContent("listContents");
+
+  const contentPromises = listContents.data.map(async (value) => {
+    const contentJson = await getContent(value.name);
+
+    return { value, contentJson };
+  });
+
+  const contents = await Promise.all(contentPromises);
+
+  const contentHtml = contents
+    .map(({ value, contentJson }) => createContentHtml(value, contentJson))
+    .join("");
+
+  mainContent.innerHTML = contentHtml;
+}
+
+document.addEventListener("DOMContentLoaded", renderContent);
