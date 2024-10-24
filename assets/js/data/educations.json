@@ -1,0 +1,23 @@
+{
+  "message": "OK",
+  "data": [
+    {
+      "name": "Amikom Yogyakarta University",
+      "description": "Information System - GPA 3.85",
+      "start_date": "2019",
+      "end_date": "2023"
+    },
+    {
+      "name": "Dicoding Academy",
+      "description": "Training as a frontend and backend developer",
+      "start_date": "February 2022",
+      "end_date": "July 2021"
+    },
+    {
+      "name": "PT Git Solution",
+      "description": "Bootcamp as a web developer",
+      "start_date": "September 2021",
+      "end_date": "December 2021"
+    }
+  ]
+}

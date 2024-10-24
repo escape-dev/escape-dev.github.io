@@ -5,21 +5,28 @@
       "name": "experiences",
       "url": "/experiences",
       "description": "return all my experiences",
-      "status": "200",
+      "status": 200,
       "method": "GET"
     },
     {
       "name": "projects",
       "url": "/projects",
       "description": "return all my projects",
-      "status": "422",
+      "status": 422,
       "method": "GET"
     },
     {
       "name": "reachMeOut",
       "url": "/reach-me-out",
       "description": "return all my contacts",
-      "status": "200",
+      "status": 200,
+      "method": "GET"
+    },
+    {
+      "name": "educations",
+      "url": "/educations",
+      "description": "return all my educations",
+      "status": 200,
       "method": "GET"
     }
   ]
