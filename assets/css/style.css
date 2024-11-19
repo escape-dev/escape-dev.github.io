@@ -42,6 +42,12 @@ main {
     line-height: 2.0;
 }
 
+.about .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .experience {
     display: flex;
     flex-direction: column;
